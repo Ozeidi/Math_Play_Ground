@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+ 
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    
+
+    <script src="js/Collatz.js"></script>
+    <script src="js/sidebar.js"></script>
+
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" type="text/css" href="css/ui.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/sidebar.css">
+
+    <meta charset="utf-8">
+  </head>
+
+  <body>
+  </div>
+
+  <div id="main">
+    <h1>The  Tree</h1>
+    <button class="openbtn" onclick="openNav()">&#9776; Control Panel</button>
+
+
+  <div id="Canvas" class="Canvas"> </div>
+
+  </body>
+
+<!-- 
+  ##############
+  CONTROL PANEL
+  ##############
+  
+ -->
+  <div id="mySidebar" class="sidebar" >
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div data-role="main" class="ui-content">
+      <button id="Refresh" onclick="refresh()" > Refresh</button>
+
+      <br>
+      <div>
+        <input type="checkbox" id="animate" name="animate" onchange="refresh()"  >
+        <label for="animate">Animate</label>
+      </div>
+
+
+
+      <h1 for="slider-fill">Branch Size</h1>
+      <input type="range" name="branch-size" id="branch-size" value="3" min="1"
+        max="20" data-highlight="true"
+        onchange="refresh()">
+  
+      <h1 for="slider-fill">Decay Factor</h1>
+      <input type="range" name="decay-factor" id="decay-factor" value="100" step="0.1"
+        min="90" max="105" data-highlight="true"
+        onchange="refresh()">
+      
+
+      <div data-role="rangeslider">
+        <h1 id="angle">Angle:</h1>
+        <input type="range" name="odd-angle" id="odd-angle" value="-5" min="-20"
+          max="20" data-popup-enabled="true"
+          onchange="refresh()">
+        <input type="range" name="even-angle" id="even-angle" value="5" min="-20"
+          max="20" data-popup-enabled="true"
+          onchange="refresh()">
+      </div>
+    
+      <h1 for="slider-fill">Branch Opacity</h1>
+      <input type="range" name="branch-alpha" id="branch-alpha" value="70"
+        min="1" max="100" data-highlight="true"
+        onchange="refresh()">
+
+
+        <div >
+            <input type="checkbox" id="radial" name="radial"  onchange="refresh()">
+            <label for="radial">Radial</label>
+          </div>
+
+          <fieldset class="answer">
+            <h1 for="slider-fill">Radius</h1>
+            <input type="range" name="radius" id="radius" value="100"
+              min="10" max="800" data-highlight="true"
+              onchange="refresh()">
+
+            <h1 for="slider-fill">Radial Angle</h1>
+            <input type="range" name="radial-angle" id="radial-angle" value="30"
+            min="0" max="181" data-highlight="true"
+            onchange="refresh()">
+        </fieldset>
+      <h1>Leaves Color</h1>
+      <div class="colorPicker" align="center" ></div>
+  
+      <p class="title">Selected Color:</p>
+      <p id="values"></p>
+
+    </div>
+
+  </div>
+<!-- 
+  ##############
+  ##############  
+ -->
+<div align="center" >
+  <h4>Developed for fun by O.Zeidi 
+    <a href="https://github.com/Ozeidi">GitHub</a>, 
+    <a href="http://ozeidi.io/">Blog</a> <br>
+    Inspired by this video from Veritasium  Channel<br>
+    <a href="https://www.youtube.com/watch?v=094y1Z2wpJg">The Simplest Math Problem No One Can Solve</a>
+  </h4>
+</div>
+  </div>
+
+  <!-- COLOR PICKER -->
+
+  <script src='https://cdn.jsdelivr.net/npm/@jaames/iro/dist/iro.min.js'></script>
+  <script src="js/ColorPicker.js"></script>
+
+</html>
