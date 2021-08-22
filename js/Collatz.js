@@ -22,7 +22,7 @@ function setup() {
     background(0);
     angleMode(DEGREES)
     //var arr = Array()
-    for (i = 1; i <= 1000; i++) {
+    for (i = 1; i <= 100000; i++) {
         let seq = [];
         //console.log("Seed :", i)
         var res = i;
